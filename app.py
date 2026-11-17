@@ -649,7 +649,7 @@ def history_page() -> None:
         st.download_button(
             "⬇️  Export seluruh riwayat (CSV)",
             data=build_csv(history),
-            file_name=f"shieldai_history_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+            file_name=f"Spam_Detector_history_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
             mime="text/csv",
             use_container_width=True,
             type="primary",
@@ -665,11 +665,11 @@ def history_page() -> None:
 
 
 def about_page() -> None:
-    page_header("ABOUT SHIELDAI", "Understand the technology", "Kenali proses di balik analisis pesan, komponen machine learning yang digunakan, dan batasan hasil prediksi.")
+    page_header("ABOUT Spam Detector", "Understand the technology", "Kenali proses di balik analisis pesan, komponen machine learning yang digunakan, dan batasan hasil prediksi.")
     st.markdown(
         '<div class="hero"><div class="hero-kicker">BUILT FOR EVERYDAY DIGITAL AWARENESS</div>'
         '<div class="hero-title">A smarter first look<br>at suspicious messages.</div>'
-        '<p class="hero-copy">ShieldAI membantu mengidentifikasi pola pesan yang berpotensi spam melalui pemrosesan bahasa alami dan pembelajaran mesin. Aplikasi ini merupakan alat bantu pemeriksaan, bukan pengganti penilaian keamanan manusia.</p>'
+        '<p class="hero-copy">Spam Detector membantu mengidentifikasi pola pesan yang berpotensi spam melalui pemrosesan bahasa alami dan pembelajaran mesin. Aplikasi ini merupakan alat bantu pemeriksaan, bukan pengganti penilaian keamanan manusia.</p>'
         '<div class="hero-pill">🛡️ Text classification · Screenshot OCR</div></div>',
         unsafe_allow_html=True,
     )
@@ -724,7 +724,7 @@ def main() -> None:
 
     with st.sidebar:
         st.markdown(
-            '<div class="brand-lockup"><div class="brand-mark">🛡️</div><div><div class="brand-name">ShieldAI</div><div class="brand-sub">Spam Intelligence</div></div></div>',
+            '<div class="brand-lockup"><div><div class="brand-name">Spam Detector</div><div class="brand-sub">Spam Intelligence</div></div></div>',
             unsafe_allow_html=True,
         )
         st.markdown('<div style="color:#8394b2;font-size:.68rem;font-weight:800;letter-spacing:.14em;margin:.2rem 0 .65rem .25rem">WORKSPACE</div>', unsafe_allow_html=True)
@@ -755,7 +755,7 @@ def main() -> None:
             st.markdown('<div style="color:#8fe0c8;font-size:.77rem;font-weight:700">● Model siap digunakan</div>', unsafe_allow_html=True)
             st.markdown('<div class="sidebar-note">TF-IDF + Multinomial Naive Bayes<br>OCR: Indonesian + English</div>', unsafe_allow_html=True)
         st.markdown("<hr>", unsafe_allow_html=True)
-        st.markdown('<div class="sidebar-note">ShieldAI membantu pemeriksaan awal terhadap pesan mencurigakan. Gunakan hasil sebagai referensi, bukan keputusan keamanan otomatis.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sidebar-note">Spam Detector membantu pemeriksaan awal terhadap pesan mencurigakan. Gunakan hasil sebagai referensi, bukan keputusan keamanan otomatis.</div>', unsafe_allow_html=True)
 
     if model_error:
         page_header("SETUP REQUIRED", "Model files not found", "Aplikasi sudah berjalan, tetapi file model yang digunakan untuk prediksi belum tersedia.")
