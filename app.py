@@ -25,8 +25,8 @@ OCR_LANGUAGES = "ind+eng"
 MAX_TEXT_LENGTH = 20_000
 
 st.set_page_config(
-    page_title="ShieldAI • Spam Intelligence",
-    page_icon="🛡️",
+    page_title="Spam Detector • Spam Intelligence",
+    page_icon="    ",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -399,7 +399,7 @@ def build_csv(history: list[dict[str, Any]]) -> bytes:
 
 def render_footer() -> None:
     st.markdown(
-        '<div class="app-footer">SHIELDAI · Spam Intelligence &nbsp;|&nbsp; TF-IDF · Multinomial Naive Bayes · Tesseract OCR<br>'
+        '<div class="app-footer">Spam Detector · Spam Intelligence &nbsp;|&nbsp; TF-IDF · Multinomial Naive Bayes · Tesseract OCR<br>'
         'Hasil merupakan prediksi model, bukan jaminan bahwa suatu pesan aman atau berbahaya.</div>',
         unsafe_allow_html=True,
     )
